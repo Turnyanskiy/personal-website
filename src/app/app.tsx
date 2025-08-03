@@ -1,18 +1,22 @@
-import { useState } from 'react';
+import { Routes, Route } from 'react-router-dom'
+import Navbar from '../components/Navbar/Navbar'
+import Home from './Home'
+import Blog from './Blog'
 
 export default function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen text-center">
-      <h1 className="text-3xl font-bold mb-4">Hello React + TypeScript!</h1>
-      <p className="mb-4">You clicked {count} times!</p>
-      <button
-        onClick={() => setCount(count + 1)}
-        className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
-      >
-        Click Me
-      </button>
+    <main className="font-mono bg-zinc-900 text-gray-300 min-h-screen">
+      <div className="max-w-7xl mx-auto p-24">
+        <h1 className="text-4xl font-bold text-white pb-3 "><span className="text-blue-400">L</span>uke <span className="text-blue-400">T</span>urnyanskiy</h1>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<p>ABOUT PAGE</p>} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/projects" element={<p>PROJECTS PAGE</p>} />
+          <Route path="/contact" element={<p>CONTACT PAGE</p>} />
+        </Routes>
+      </div>
     </main>
   );
 }
