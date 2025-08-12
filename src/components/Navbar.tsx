@@ -4,7 +4,7 @@ const navLinkClass = ( {isActive}: { isActive: boolean }) => `hover:text-white h
 
 const NavBar = () => {
   return (
-    <nav className="font-bold flex mb-9 justify-between">
+    <nav className="font-bold flex mb-4 justify-between">
         <ul className="flex space-x-7 text-lg">
           <li><NavLink to="/" className={navLinkClass}>Home</NavLink></li>
           <li><NavLink to="/about" className={navLinkClass}>About</NavLink></li>

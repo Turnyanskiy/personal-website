@@ -1,7 +1,13 @@
-import { Routes, Route } from 'react-router-dom'
-import Navbar from '../components/Navbar/Navbar'
+import { Routes, Route, useParams } from 'react-router-dom'
+import Navbar from '../components/Navbar'
 import Home from './Home'
 import Blog from './Blog'
+
+// TEMPORARY FUNCTION FOR TESTING
+function BlogPost() {
+  const { id } = useParams()
+  return <p>{id}</p>
+}
 
 export default function App() {
   return (
@@ -13,6 +19,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<p>ABOUT PAGE</p>} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:id" element={<BlogPost />} />
           <Route path="/projects" element={<p>PROJECTS PAGE</p>} />
           <Route path="/contact" element={<p>CONTACT PAGE</p>} />
         </Routes>
