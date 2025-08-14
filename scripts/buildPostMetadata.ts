@@ -12,14 +12,14 @@ const files = fs.readdirSync(postsDir)
 type Post = { id: string; frontmatter: any }
 
 const listedPosts = files.reduce<Post[]>((acc, file) => {
-  if (!file.endsWith(".md")) return acc;
+  if (!file.endsWith(".mdx")) return acc;
 
   const content = fs.readFileSync(join(postsDir, file), "utf-8")
   const { data } = matter(content)
 
   if (data.listed == true) {
     acc.push({
-      id: file.replace(/\.md$/, ""),
+      id: file.replace(/\.mdx$/, ""),
       frontmatter: data,
     });
   }

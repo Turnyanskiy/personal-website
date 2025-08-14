@@ -4,7 +4,8 @@ description: This is a description of the super cool blog about the super cool t
 tags: [ Mathematics, Analysis, ]
 listed: true
 ---
-# A demo of `react-markdown`
+***
+# A demo of ```react-markdown```
 
 `react-markdown` is a markdown component for React.
 
@@ -12,7 +13,18 @@ listed: true
 
 👈 Try writing some markdown on the left.
 
+export function Thing() {
+  return <>World</>
+}
+
+# Hello <Thing />
+
+<div style={{backgroundColor: 'violet', padding: '1rem'}}>
+  Try and change the background color to `tomato`.
+</div>
+
 ## Overview
+
 
 * Follows [CommonMark](https://commonmark.org)
 * Optionally follows [GitHub Flavored Markdown](https://github.github.com/gfm/)
