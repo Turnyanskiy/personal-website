@@ -1,8 +1,8 @@
-import { Routes, Route, useParams } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import Navbar from '../components/Navbar'
-import Home from './Home'
 import Blog from './Blog'
 import Post from '../components/Post'
+import Projects from './Projects'
 
 
 export default function App() {
@@ -12,11 +12,11 @@ export default function App() {
         <h1 className="text-4xl font-bold text-white pb-3 "><span className="text-blue-400">L</span>uke <span className="text-blue-400">T</span>urnyanskiy</h1>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<p> HOME </p>} />
           <Route path="/about" element={<Post id="about"/>} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:id" element={<Post />} />
-          <Route path="/projects" element={<p>PROJECTS PAGE</p>} />
+          <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Post id="contact"/>} />
         </Routes>
       </div>

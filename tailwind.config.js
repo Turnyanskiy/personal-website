@@ -2,7 +2,7 @@
 export default {
   content: [
     "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   safelist: [
     'bg-green-400',
@@ -19,7 +19,11 @@ export default {
     'hover:bg-zinc-400',
   ],
   theme: {
-    extend: {},
+    extend: {
+      lineClamp: {
+        10: '10',
+      },
+    },
   },
   plugins: [
     require('@tailwindcss/typography'),

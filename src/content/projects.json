@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Personal Website",
+    "description": "A website to showcase my projects, blogs, and interests. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "tags": ["react", "tailwindcss", "mdx"],
+    "github": "https://github.com/turnyanskiy/personal-website"
+  },
+  {
+    "title": "Data Analysis Tool",
+    "description": "A Python tool for analyzing and visualizing datasets.",
+    "tags": ["python", "pandas", "matplotlib"],
+    "github": "https://github.com/turnyanskiy/data-analysis-tool"
+  },
+  {
+    "title": "Titles are one line",
+    "description": "Scripts and templates to speed up competitive programming practice.",
+    "tags": ["cpp", "algorithms", "competitive-programming"],
+    "github": "https://github.com/turnyanskiy/competitive-programming-helper"
+  },
+  {
+    "title": "Personal Website",
+    "description": "A website to showcase my projects, blogs, and interests.",
+    "tags": ["react", "tailwindcss", "mdx"],
+    "github": "https://github.com/turnyanskiy/personal-website"
+  },
+  {
+    "title": "Data Analysis Tool",
+    "description": "A Python tool for analyzing and visualizing datasets.",
+    "tags": ["python", "pandas", "matplotlib"],
+    "github": "https://github.com/turnyanskiy/data-analysis-tool"
+  },
+  {
+    "title": "Competitive Programmi",
+    "description": "Scripts and templates to speed up competitive programming practice.",
+    "tags": ["cpp", "algorithms", "competitive-programming"],
+    "github": "https://github.com/turnyanskiy/competitive-programming-helper"
+  }
+]

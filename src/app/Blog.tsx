@@ -1,5 +1,5 @@
-import listedPosts from '../posts/listedPosts.json';
-import tagColors from '../posts/tagColors.json';
+import listedPosts from '../content/listedPosts.json';
+import tagColors from '../content/tagColors.json';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import Tag from '../components/Tag'
@@ -17,7 +17,6 @@ export default function Blog() {
 
   return (
     <>
-      {console.log(selectedTag)}
       <div className="mb-5 divide-x">
         {/* 
         Sorting by tags goes here. I can detect all the tags from json file and display them.

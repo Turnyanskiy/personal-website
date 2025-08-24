@@ -1,12 +1,12 @@
 import { useParams } from 'react-router-dom'
 
-const posts = import.meta.glob('../posts/*.mdx', { eager: true })
+const posts = import.meta.glob('../content/posts/*.mdx', { eager: true })
 
 export default function Post({ id }: {id?: string}) {
   const params = useParams<{id: string}>()
   const postId = id ?? params.id
 
-  const post = posts[`../posts/${postId}.mdx`]
+  const post = posts[`../content/posts/${postId}.mdx`]
 
   if (!post) {
     return <p>404 - page not found</p>

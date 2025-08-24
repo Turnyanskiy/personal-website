@@ -1,4 +1,4 @@
-import tagColorsJson from '../posts/tagColors.json'
+import tagColorsJson from '../content/tagColors.json'
 const tagColors: Record<string, string> = tagColorsJson
 
 interface TagProps {

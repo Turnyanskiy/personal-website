@@ -1,0 +1,17 @@
+{
+  "All": "zinc",
+  "Mathematics": "green",
+  "Analysis": "green",
+  "Programming": "violet",
+  "Experience": "orange",
+  "Group theory": "green",
+  "react": "violet",
+  "tailwindcss": "violet",
+  "mdx": "violet",
+  "python": "violet",
+  "pandas": "violet",
+  "matplotlib": "violet",
+  "cpp": "violet",
+  "algorithms": "green",
+  "competitive-programming": "green"
+}
