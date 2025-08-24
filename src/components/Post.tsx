@@ -14,7 +14,7 @@ export default function Post({ id }: {id?: string}) {
 
   const Content = post.default
   return (
-    <article className="prose prose-invert max-w-none mt-10 text-justify">
+    <article className="prose prose-invert max-w-none mt-4 text-justify">
       <Content />
     </article>
   )

@@ -1,0 +1,48 @@
+---
+title: Home
+description: Landing page for personal website with quick introduction, most recent blog post, and the most recent projects.
+tags: []
+listed: false
+---
+import { Link } from 'react-router-dom'
+import listedPosts from '../listedPosts.json'
+import projectJSON from '../projects.json'
+import tagColors from '../tagColors.json'
+import PostListing from '../../components/PostListing'
+import ProjectListing from '../../components/ProjectListing'
+import { blogMainTags } from '../../app/Blog'
+import { projectMainTags } from '../../app/Projects'
+
+export const post = listedPosts.slice(-1)[0]
+export const projects = projectJSON.slice(0, 3)
+
+#### Welcome to my personal website!
+
+Here you’ll find a collection of my work, from write-ups and thoughts in the <Link to="/blog">blog</Link> to some cool projects in <Link to="/projects">projects</Link> section.  
+
+Scroll down to see my latest post and projects.
+
+{/* Most recent blog post */}
+### Latest blog post
+<ul className="list-none p-0">
+    <PostListing 
+        post={post}
+        selectedTag="All"
+        setSelectedTag={(tag) => {}}
+        mainTags={blogMainTags}
+    />
+</ul>
+
+{/* Most recent projects */}
+### Latest Projects
+<ul className="grid grid-cols-3 gap-3 p-0">
+    {projects.map(project => (
+        <ProjectListing 
+            key={project.id}
+            project={project}
+            selectedTag="All"
+            setSelectedTag={(tag) => {}}
+            mainTags={projectMainTags}
+        />
+    ))}
+</ul>

@@ -1,14 +1,14 @@
 import listedPosts from '../content/listedPosts.json';
 import tagColors from '../content/tagColors.json';
-import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import Tag from '../components/Tag'
 import Dropdown from '../components/Dropdown'
+import PostListing from '../components/PostListing';
+
+export const blogMainTags = ["All", "Mathematics", "Programming", "Experience"]
 
 export default function Blog() {
   const [ selectedTag, setSelectedTag ] = useState<string>("All")
-  
-  const mainTags = ["All", "Mathematics", "Programming", "Experience"]
   
   let posts = listedPosts
   if ( selectedTag != "All") {
@@ -30,7 +30,7 @@ export default function Blog() {
 
         I should decide on these tags beforehand and limit myself to them (Can add a couple extra ones later.)
         */}
-        {mainTags.map(tag => (
+        {blogMainTags.map(tag => (
           <Tag
             key={tag}
             label={tag}
@@ -39,9 +39,9 @@ export default function Blog() {
           />
         ))}
         
-          <Dropdown label={<span className='p-2'><span className={`${!mainTags.includes(selectedTag)? `text-black bg-white` : `hover:bg-opacity-60 text-white`} hover:bg-white hover:text-black`}>More</span></span>} content={
+          <Dropdown label={<span className='p-2'><span className={`${!blogMainTags.includes(selectedTag)? `text-black bg-white` : `hover:bg-opacity-60 text-white`} hover:bg-white hover:text-black`}>More</span></span>} content={
             Object.keys(tagColors).map( tag => (
-              !mainTags.includes(tag) &&
+              !blogMainTags.includes(tag) &&
               <Tag
                 key={tag}
                 label={tag}
@@ -54,29 +54,11 @@ export default function Blog() {
       <div>
         <ul className="space-y-4">
           {posts.map((post) => (
-            <li
-              key={post.id}
-              className="p-5 border-2 border-white"
-            >
-              <h2 className="text-lg">
-                <Link className="font-bold hover:text-white hover:underline decoration-blue-400 transition" to={`/blog/${post.id}`}>
-                  {post.frontmatter.title}
-                </Link> [<Tag label={post.frontmatter.tags[0]} isActive={selectedTag == post.frontmatter.tags[0]} onSelect={() => setSelectedTag(post.frontmatter.tags[0])} />] {/* This will be the master tag. Hovering over it will highlight with correct color and clicking will sort by that tag.*/}
-              </h2>
-
-              <p className="my-2">{post.frontmatter.description}</p>
-
-              <Dropdown label={<span className={`${!mainTags.includes(selectedTag)? `text-black bg-white` : `hover:bg-opacity-60`} hover:bg-white hover:text-black text-xs underline`}>Show all tags</span>} content={
-                post.frontmatter.tags.map( tag => (
-                <Tag
-                  key={tag}
-                  label={tag}
-                  isActive={selectedTag == tag}
-                  onSelect={() => setSelectedTag(tag)}
-                />
-                ))
-              }/>
-            </li>
+            <PostListing 
+              post={post}
+              selectedTag={selectedTag}
+              setSelectedTag={setSelectedTag}
+              mainTags={blogMainTags}/>
           ))}
         </ul>
       </div>
