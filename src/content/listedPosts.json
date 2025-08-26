@@ -2,11 +2,10 @@
   {
     "id": "0001",
     "frontmatter": {
-      "title": "A Super Cool Title About A Super Cool Topic",
-      "description": "This is a description of the super cool blog about the super cool topic. I'm not sure how long I should all the descriptions to be but here it is.",
+      "title": "Fourier & Hartley Transforms: Principles and Applications",
+      "description": "Exploring the mathematical foundations of Fourier and Hartley transforms, including the Fourier Slice Theorem, and their application to my work in structural biology at InstaDeep.",
       "tags": [
-        "Mathematics",
-        "Analysis"
+        "Mathematics"
       ],
       "listed": true
     }
@@ -14,11 +13,14 @@
   {
     "id": "0002",
     "frontmatter": {
-      "title": "Another Cool Title This Blog is Also Cool",
-      "description": "This is a description of the super cool blog about the super cool topic. I'm not sure how long I should all the descriptions to be but here it is.",
+      "title": "Quaternions and Spatial Rotation: Principles and Applications",
+      "description": "Exploring the mathematical foundations of quaternions and their role in spatial rotation, with direct applications to my work at InstaDeep on modeling molecular poses.",
       "tags": [
-        "Programming",
-        "Group theory"
+        "Mathematics",
+        "Algebra",
+        "Python",
+        "Quaternions",
+        "Geometry"
       ],
       "listed": true
     }

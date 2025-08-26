@@ -5,7 +5,7 @@ import tagColors from '../content/tagColors.json';
 import { useState } from 'react';
 import ProjectListing from '../components/ProjectListing';
 
-export const projectMainTags = ["All", "UNDECIDED", "UNDECIDED", "UNDECIDED"]
+export const projectMainTags = ["All", "Python", "TypeScript", "R"]
 
 export default function Projects() {
   const [ selectedTag, setSelectedTag ] = useState<string>("All")
