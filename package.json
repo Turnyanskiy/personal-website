@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-post-metadata": "node scripts/buildPostMetadata.ts",
+    "build-post-metadata": "npx ts-node-esm scripts/buildPostMetadata.ts",
     "dev": "npm run build-post-metadata && vite",
     "build": "npm run build-post-metadata && vite build",
     "preview": "vite preview"
