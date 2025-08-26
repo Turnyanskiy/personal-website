@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-post-metadata": "node scripts/buildPostMetadata.ts",
+    "build-post-metadata": "npx ts-node scripts/buildPostMetadata.ts",
     "dev": "npm run build-post-metadata && vite",
     "build": "npm run build-post-metadata && vite build",
     "preview": "vite preview"
@@ -30,7 +30,8 @@
     "gray-matter": "^4.0.3",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.17",
-    "typescript": "^5.8.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2",
     "vite": "^7.0.6"
   }
 }
